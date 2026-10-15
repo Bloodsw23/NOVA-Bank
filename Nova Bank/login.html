@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вхід до NOVA Internet Bank</title>
+<meta name="description" content="Вхід до особистого кабінету АБ «НОВА БАНК».">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='26' fill='%238b5cf6'/></svg>">
+<script>document.documentElement.dataset.theme=localStorage.getItem("nova-theme")||"light";document.documentElement.dataset.lang=localStorage.getItem("nova-lang")||"uk";</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">
+      <span class="logo__mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 12 4l8 14"/><path d="M8 18h8"/></svg></span>
+      NOVA Bank
+    </a>
+    <nav class="nav">
+      <a href="index.html">Головна</a>
+      <a href="products.html">Продукти</a>
+      <a href="about.html">Про банк</a>
+      <a href="help.html">Допомога</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang-switch" role="group" aria-label="Вибір мови">
+        <button data-lang="uk" aria-pressed="true">УКР</button><button data-lang="en" aria-pressed="false">ENG</button>
+      </div>
+      <button class="theme-toggle" aria-label="Переключити тему">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14A8 8 0 0 1 10 4a8 8 0 1 0 10 10Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"/></svg>
+      </button>
+      <a class="btn btn--ghost btn--sm" href="index.html">На головну</a>
+      <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="auth">
+    <div class="auth__box">
+      <div class="logo" style="margin-bottom:24px;font-size:18px">
+        <span class="logo__mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 12 4l8 14"/><path d="M8 18h8"/></svg></span>
+        Internet Bank
+      </div>
+
+      <h2 style="font-size:26px;margin-bottom:6px">Вхід до кабінету</h2>
+      <p style="font-size:14px;margin-bottom:26px">Деморежим: підійде будь-який номер телефону та код <strong style="color:var(--text)">1234</strong>.</p>
+
+      <form id="login-step-1" novalidate>
+        <div class="field">
+          <label for="phone">Номер телефону</label>
+          <input class="input" id="phone" type="tel" inputmode="tel" placeholder="+380 67 000 00 00" autocomplete="tel" required>
+          <div class="hint" id="phone-hint"></div>
+        </div>
+        <div class="field">
+          <label for="password">Пароль</label>
+          <input class="input" id="password" type="password" placeholder="••••••••" autocomplete="current-password" required>
+          <div class="hint" id="password-hint"></div>
+        </div>
+        <button class="btn btn--primary btn--block" type="submit">Продовжити</button>
+      </form>
+
+      <form id="login-step-2" hidden novalidate>
+        <div class="field">
+          <label>Код з SMS для <span id="sent-to" style="color:var(--text)"></span></label>
+          <div style="display:flex;gap:9px" id="code">
+            <input class="input code-digit" maxlength="1" inputmode="numeric" pattern="[0-9]" style="text-align:center;font-size:22px;font-weight:700;padding:12px 0">
+            <input class="input code-digit" maxlength="1" inputmode="numeric" pattern="[0-9]" style="text-align:center;font-size:22px;font-weight:700;padding:12px 0">
+            <input class="input code-digit" maxlength="1" inputmode="numeric" pattern="[0-9]" style="text-align:center;font-size:22px;font-weight:700;padding:12px 0">
+            <input class="input code-digit" maxlength="1" inputmode="numeric" pattern="[0-9]" style="text-align:center;font-size:22px;font-weight:700;padding:12px 0">
+          </div>
+          <div class="hint" id="code-hint"></div>
+        </div>
+        <button class="btn btn--primary btn--block" type="submit">Увійти</button>
+        <div class="auth__alt"><button type="button" class="btn btn--ghost btn--sm" id="back">Змінити номер</button></div>
+      </form>
+
+      <div class="separator">вхід без пароля</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <button class="btn btn--ghost" data-biometric>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 11v3"/><path d="M7 12a5 5 0 0 1 10 0v3a5 5 0 0 1-10 0Z"/><path d="M4 10a8 8 0 0 1 16 0v5"/><path d="M12 4a8 8 0 0 0-8 8"/></svg>
+          Face ID
+        </button>
+        <button class="btn btn--ghost" data-diia>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6Z"/></svg>
+          Дія.Підпис
+        </button>
+      </div>
+      <a class="btn btn--ghost btn--block" href="dashboard.html" style="margin-top:10px">Як гість (демо-кабінет)</a>
+
+      <div class="auth__alt">Уперше в NOVA? <a href="products.html">Відкрийте рахунок за 4 хвилини</a></div>
+    </div>
+  </div>
+</main>
+
+<script src="assets/js/i18n-en.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  const digits = document.querySelectorAll(".code-digit");
+  const step1 = document.getElementById("login-step-1");
+  const step2 = document.getElementById("login-step-2");
+  const phone = document.getElementById("phone");
+  const password = document.getElementById("password");
+
+  const setErr = (input, hint, msg) => {
+    input.classList.toggle("is-invalid", Boolean(msg));
+    document.getElementById(hint).textContent = msg || "";
+  };
+
+  phone.addEventListener("input", () => { phone.value = window.maskPhone(phone.value); });
+
+  step1.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let ok = true;
+    if (!window.isPhoneReady(phone.value)) { setErr(phone, "phone-hint", window.t("Введіть номер повністю")); ok = false; } else setErr(phone, "phone-hint", "");
+    if (password.value.length < 6) { setErr(password, "password-hint", window.t("Мінімум 6 символів")); ok = false; } else setErr(password, "password-hint", "");
+    if (!ok) return;
+    document.getElementById("sent-to").textContent = phone.value;
+    step1.hidden = true;
+    step2.hidden = false;
+    digits[0].focus();
+    window.showToast(window.t("Код надіслано (демо: 1234)"));
+  });
+
+  digits.forEach((el, i) => {
+    el.addEventListener("input", () => {
+      el.value = el.value.replace(/\D/g, "");
+      if (el.value && i < digits.length - 1) digits[i + 1].focus();
+    });
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && !el.value && i > 0) digits[i - 1].focus();
+    });
+    el.addEventListener("paste", (e) => {
+      e.preventDefault();
+      const txt = (e.clipboardData.getData("text") || "").replace(/\D/g, "").slice(0, 4);
+      [...txt].forEach((ch, k) => { if (digits[k]) digits[k].value = ch; });
+      digits[Math.min(txt.length, 3)].focus();
+    });
+  });
+
+  step2.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const code = [...digits].map((d) => d.value).join("");
+    if (code.length < 4) { document.getElementById("code-hint").textContent = window.t("Введіть 4 цифри"); return; }
+    if (code !== "1234") { document.getElementById("code-hint").textContent = window.t("Невірний код. Демо-код — 1234"); return; }
+    document.getElementById("code-hint").textContent = "";
+    window.showToast(window.t("Входимо до кабінету…"));
+    sessionStorage.setItem("nova_user", JSON.stringify({ phone: phone.value }));
+    setTimeout(() => location.href = "dashboard.html", 700);
+  });
+
+  document.getElementById("back").addEventListener("click", () => {
+    step2.hidden = true;
+    step1.hidden = false;
+  });
+
+  document.querySelector("[data-biometric]").addEventListener("click", () => {
+    window.showToast(window.t("Face ID недоступний у демо. Використайте код 1234"));
+  });
+  document.querySelector("[data-diia]").addEventListener("click", () => {
+    window.showToast(window.t("Дія.Підпис недоступний у демо. Використайте код 1234"));
+  });
+</script>
+</body>
+</html>

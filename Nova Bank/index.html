@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOVA Bank — банк, що не заважає жити</title>
+<meta name="description" content="NOVA Bank — дебетові та кредитні картки з кешбеком до 30%, депозити до 16,5% річних, кредити від 9,9% та інвестиції в одному застосунку.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='26' fill='%238b5cf6'/></svg>">
+<script>document.documentElement.dataset.theme=localStorage.getItem("nova-theme")||"light";document.documentElement.dataset.lang=localStorage.getItem("nova-lang")||"uk";</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">
+      <span class="logo__mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 12 4l8 14"/><path d="M8 18h8"/></svg></span>
+      NOVA Bank
+    </a>
+    <nav class="nav">
+      <a href="index.html">Головна</a>
+      <div class="has-mega">
+        <a href="products.html">Продукти</a>
+        <div class="mega">
+          <a href="products.html" data-tab="cards"><span class="mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg></span><span><strong>Класична дебетова</strong><span>0 ₴ обслуговування, 5% кешбек</span></span></a>
+          <a href="products.html" data-tab="cards"><span class="mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M6 15h6"/></svg></span><span><strong>Infinity та Travel</strong><span>до 30% кешбек, 120 днів без %</span></span></a>
+          <a href="products.html" data-tab="deposit"><span class="mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span><strong>Депозити</strong><span>до 16,5% річних</span></span></a>
+          <a href="products.html" data-tab="credit"><span class="mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></span><span><strong>Кредити</strong><span>від 9,9%, рішення за 2 хвилини</span></span></a>
+          <a href="products.html" data-tab="credit"><span class="mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="8" rx="2"/><path d="M7 11 9 5h6l2 6"/></svg></span><span><strong>Авто та іпотека</strong><span>перший внесок від 10%</span></span></a>
+          <a href="products.html" data-tab="invest"><span class="mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M14 7h6v6"/></svg></span><span><strong>Інвестиції</strong><span>ОВДП та ІПР, 12 000 інструментів</span></span></a>
+        </div>
+      </div>
+      <a href="about.html">Про банк</a>
+      <a href="help.html">Допомога</a>
+    </nav>
+    <div class="header__actions">
+      <button class="kbd-hint" data-open-palette aria-label="Пошук по сайту">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.3-4.3"/></svg>
+        Пошук<kbd>Ctrl K</kbd>
+      </button>
+      <div class="lang-switch" role="group" aria-label="Вибір мови">
+        <button data-lang="uk" aria-pressed="true">УКР</button><button data-lang="en" aria-pressed="false">ENG</button>
+      </div>
+      <button class="theme-toggle" aria-label="Переключити тему">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14A8 8 0 0 1 10 4a8 8 0 1 0 10 10Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"/></svg>
+      </button>
+      <a class="btn btn--ghost btn--sm" href="login.html">Увійти</a>
+      <a class="btn btn--primary btn--sm" href="login.html">Відкрити рахунок</a>
+      <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-label="Курси та ставки">
+  <div class="ticker__track"></div>
+</div>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="eyebrow">Ліцензія НБУ · гарантування вкладів ФГВФЛ до 600 000 ₴</span>
+        <h1>Банк, який<br>не заважає жити<span class="grad-text">.</span></h1>
+        <p class="lead">Картки, депозити, кредити та інвестиції в одному застосунку. Без прихованих комісій, без черг і без дзвінків «щоб уточнити деталі».</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn--primary" href="products.html">Підібрати продукт</a>
+          <a class="btn btn--ghost" href="dashboard.html">Переглянути кабінет</a>
+        </div>
+        <div class="hero__meta">
+          <div class="stat"><div class="stat__value"><span data-count="4.8" data-suffix=" млн">0</span></div><div class="stat__label">клієнтів</div></div>
+          <div class="stat"><div class="stat__value"><span data-count="30" data-suffix="%">0</span></div><div class="stat__label">максимальний кешбек</div></div>
+          <div class="stat"><div class="stat__value"><span data-count="19" data-suffix=" років">0</span></div><div class="stat__label">на ринку</div></div>
+          <div class="stat"><div class="stat__value">AA<span class="grad-text">-</span></div><div class="stat__label">рейтинг надійності</div></div>
+        </div>
+      </div>
+
+      <div class="cardstage">
+        <div class="bankcard" data-hidden-number>
+          <div class="bankcard__top">
+            <div>
+              <div class="bankcard__brand">NOVA</div>
+              <div class="bankcard__type">Infinity</div>
+            </div>
+            <div class="wifi"></div>
+          </div>
+          <div class="chip"></div>
+          <div class="bankcard__number">
+            <span data-number="5412 8891 4437 2019">•••• •••• •••• </span>
+            <button class="reveal-toggle" aria-label="Показати номер картки">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <div class="bankcard__bottom">
+            <div class="bankcard__holder"><small>Власник</small>A. Ivanova</div>
+            <div class="bankcard__holder"><small>Дійсна до</small>09/31</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Продукти</span>
+        <h2>Чотири продукти на будь-який випадок</h2>
+        <p class="lead">Одна лінійка закриває типовий фінансовий сценарій: витрачати, накопичувати, позичати та примножувати.</p>
+      </div>
+      <div class="grid grid--4">
+        <article class="tile reveal">
+          <div class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg></div>
+          <h3>Картки</h3>
+          <p>До 30% кешбеку на обрані категорії та 12% на залишок. Обслуговування — 0 ₴ назавжди.</p>
+        </article>
+        <article class="tile reveal">
+          <div class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3>Депозити</h3>
+          <p>Ставка до 16,5% річних, відкриття за два тапи, виплата відсотків наприкінці строку або щомісяця.</p>
+        </article>
+        <article class="tile reveal">
+          <div class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></div>
+          <h3>Кредити</h3>
+          <p>Готівкою, авто та іпотека від 9,9%. Рішення за 2 хвилини, без довідок до 3 млн ₴.</p>
+        </article>
+        <article class="tile reveal">
+          <div class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M14 7h6v6"/></svg></div>
+          <h3>Інвестиції</h3>
+          <p>Брокерський рахунок, ІПР та ОВДП, 12 000 інструментів, комісія від 0,05% і готові портфелі.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="background:linear-gradient(180deg,transparent,rgba(124,58,237,.08),transparent)">
+    <div class="container">
+      <div class="two-col" style="align-items:center">
+        <div>
+          <span class="eyebrow">Чому NOVA</span>
+          <h2>Гроші мають працювати, а не чекати в черзі</h2>
+          <p>Прибрали з банка все, що дратує: платне обслуговування, дрібний шрифт, «оператор недоступний». Залишилося лише те, що приносить користь.</p>
+          <ul style="list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px">
+            <li style="display:flex;gap:12px;align-items:flex-start"><span style="width:22px;height:22px;border-radius:50%;background:var(--grad);flex:none;display:grid;place-items:center;font-size:12px;font-weight:800">✓</span><div><strong>0 ₴ за обслуговування</strong><p style="margin:2px 0 0;font-size:15px">На всіх дебетових картках, без вимог до обороту.</p></div></li>
+            <li style="display:flex;gap:12px;align-items:flex-start"><span style="width:22px;height:22px;border-radius:50%;background:var(--grad);flex:none;display:grid;place-items:center;font-size:12px;font-weight:800">✓</span><div><strong>Кешбек грошима, а не «балами»</strong><p style="margin:2px 0 0;font-size:15px">Зарахування на рахунок раз на місяць, без обмежень суми.</p></div></li>
+            <li style="display:flex;gap:12px;align-items:flex-start"><span style="width:22px;height:22px;border-radius:50%;background:var(--grad);flex:none;display:grid;place-items:center;font-size:12px;font-weight:800">✓</span><div><strong>Підтримка 24/7 відповідає живою людиною</strong><p style="margin:2px 0 0;font-size:15px">Середній час відповіді в чаті — 38 секунд.</p></div></li>
+          </ul>
+        </div>
+        <div class="panelbox reveal" style="padding:28px">
+          <h3 style="margin-bottom:20px">Калькулятор депозиту</h3>
+          <div class="field">
+            <label for="c-amount">Сума, <span id="c-amount-out">300 000 ₴</span></label>
+            <input class="input" type="range" id="c-amount" min="50000" max="5000000" step="50000" value="300000" style="padding:6px">
+          </div>
+          <div class="field">
+            <label for="c-term">Строк, <span id="c-term-out">12 місяців</span></label>
+            <input class="input" type="range" id="c-term" min="3" max="36" step="1" value="12" style="padding:6px">
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-top:14px;border-top:1px solid var(--border);margin-top:8px">
+            <div><div class="kpi__label">Ставка</div><div class="kpi__value grad-text" id="c-rate">15,0%</div></div>
+            <div style="text-align:right"><div class="kpi__label">Нарахуємо</div><div class="kpi__value" id="c-profit">0 ₴</div></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="products.html" style="margin-top:20px">Відкрити депозит</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Відгуки</span>
+        <h2>Що кажуть клієнти</h2>
+      </div>
+      <div class="grid grid--3">
+        <blockquote class="tile reveal" style="margin:0">
+          <p style="color:var(--text);font-size:16px">«Перевела зарплатну картку в NOVA заради кешбеку на кафе. За квартал повернули 8 400 ₴ — на ці гроші поїздили відпочивати на вихідні.»</p>
+          <footer style="display:flex;gap:12px;align-items:center;margin-top:20px"><span class="avatar" style="width:40px;height:40px;font-size:14px">АЛ</span><div><strong>Аліна</strong><div style="font-size:13px;color:var(--muted-2)">дизайнерка, Київ</div></div></footer>
+        </blockquote>
+        <blockquote class="tile reveal" style="margin:0">
+          <p style="color:var(--text);font-size:16px">«Узяв кредит на ремонт за вечір. Жодних довідок, кур'єр привіз картку наступного дня. Ставка нижча, ніж у моєму основному банку.»</p>
+          <footer style="display:flex;gap:12px;align-items:center;margin-top:20px"><span class="avatar" style="width:40px;height:40px;font-size:14px">ДМ</span><div><strong>Дмитро</strong><div style="font-size:13px;color:var(--muted-2)">інженер, Львів</div></div></footer>
+        </blockquote>
+        <blockquote class="tile reveal" style="margin:0">
+          <p style="color:var(--text);font-size:16px">«Тримаю тут усі заощадження родини на ІПР. Інтерфейс зрозумілий, аналітика витрат реально допомагає не йти в мінус до зарплати.»</p>
+          <footer style="display:flex;gap:12px;align-items:center;margin-top:20px"><span class="avatar" style="width:40px;height:40px;font-size:14px">МА</span><div><strong>Марина</strong><div style="font-size:13px;color:var(--muted-2)">лікарка, Одеса</div></div></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Як почати</span>
+        <h2>Три кроки — і ви в NOVA</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="step__n">1</div><h3>Залиште заявку</h3><p>15 запитанів замість анкети на десять сторінок. Паспорт громадянина України та РНОКПП — достатньо фото.</p></div>
+        <div class="step reveal"><div class="step__n">2</div><h3>Отримайте картку</h3><p>Кур'єр безкоштовно привезе її у зручний інтервал від 1 до 3 днів. Віртуальна версія працює одразу.</p></div>
+        <div class="step reveal"><div class="step__n">3</div><h3>Налаштуйте під себе</h3><p>Оберіть категорії кешбеку, увімкніть автонакопичення та перевипуск за графіком.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta reveal">
+        <div>
+          <h2 style="margin-bottom:8px">Відкрийте рахунок за 4 хвилини</h2>
+          <p>Без походу у відділення. Переказ між банками — 0 ₴.</p>
+        </div>
+        <a class="btn" href="login.html">Створити акаунт</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html" style="margin-bottom:14px">
+          <span class="logo__mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 12 4l8 14"/><path d="M8 18h8"/></svg></span>
+          NOVA Bank
+        </a>
+        <p style="max-width:320px;font-size:14px">Ліцензія НБУ № 1432 від 12 червня 2007 року. АБ «НОВА БАНК» — учасник системи гарантування вкладів фізичних осіб.</p>
+        <div class="socials">
+          <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="m22 3-10 9m0 0-4 8-2-7-7-2 13-8Z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M14 8h3V4h-3c-2.2 0-4 1.8-4 4v2H7v4h3v6h4v-6h3l1-4h-4V8c0-.6.4-1 1-1Z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Продукти</h4>
+        <ul><li><a href="products.html">Дебетові картки</a></li><li><a href="products.html">Кредитні картки</a></li><li><a href="products.html">Депозити</a></li><li><a href="products.html">Кредити</a></li><li><a href="products.html">Інвестиції</a></li></ul>
+      </div>
+      <div>
+        <h4>Компанія</h4>
+        <ul><li><a href="about.html">Про банк</a></li><li><a href="about.html">Реквізити</a></li><li><a href="about.html">Пресцентр</a></li><li><a href="about.html">Вакансії</a></li></ul>
+      </div>
+      <div>
+        <h4>Допомога</h4>
+        <ul><li><a href="help.html">Часті запитання</a></li><li><a href="help.html">Відділення та банкомати</a></li><li><a href="help.html">Безпека</a></li><li><a href="tel:0800212118">0 800 212 118</a></li></ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2007–2026 АБ «НОВА БАНК». Інформація на сайті не є публічною офертою.</span>
+      <span><a href="#">Політика конфіденційності</a> · <a href="#">Тарифи</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n-en.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  const amount = document.getElementById("c-amount");
+  const term = document.getElementById("c-term");
+  const out = {
+    amount: document.getElementById("c-amount-out"),
+    term: document.getElementById("c-term-out"),
+    rate: document.getElementById("c-rate"),
+    profit: document.getElementById("c-profit"),
+  };
+  function calc() {
+    const a = +amount.value, m = +term.value;
+    const rate = m >= 24 ? 16.5 : m >= 12 ? 15 : m >= 6 ? 13 : 11;
+    out.amount.textContent = window.formatMoney(a);
+    out.term.textContent = window.unit(m, ["місяць", "місяці", "місяців"], ["month", "months"]);
+    out.rate.textContent = window.formatNum(rate, 1) + "%";
+    out.profit.textContent = window.formatMoney((a * rate / 100) * (m / 12));
+  }
+  [amount, term].forEach((el) => el.addEventListener("input", calc));
+  window.addEventListener("nova:lang", calc);
+  calc();
+</script>
+</body>
+</html>
